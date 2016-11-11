@@ -1,16 +1,15 @@
 class Song
-  attr_reader :name, :artist
-  def initialize(name, artist)
+  attr_reader :name, :artist, :lyrics
+  def initialize(name, artist, lyrics)
     @name = name
     @artist = artist
+    @lyrics = lyrics
   end
 end
 
 songs = []
 
-songs[0] = Song.new("Toxic", "Britney Spears")
-songs[1] = Song.new("Marianne", "Leonard Cohen")
-songs[2] = Song.new("Slave for You", "Britney Spears")
+
 
 def artist_check(artist, songs)
   songs.each do |song|
