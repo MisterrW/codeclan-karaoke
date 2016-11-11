@@ -1,0 +1,37 @@
+
+
+The OO CodeClan Caraoke (CCC)
+You have been approached to build software for a Karaoke bar. Specifically, they want you to build a software for checking guests in and out, plus handling songs.
+Your program should be test driven and should be able to:
+Create rooms, songs and guests
+Check in guests to rooms/Check out guests from rooms
+Add songs to rooms
+Extensions
+What happens if there are more guests trying to be checked in than there is free space in the room?
+Karaoke venues usually have an entry fee - So the guests could have money so they can pay it.
+Advanced extensions
+Guests could have a favourite song, and if their favourite song is on the room's playlist, they can cheer loudly! (return a string like "Whoo!")
+Rooms can keep track of the entry fees/spending of the guests - maybe add a bar tab/bar class?
+Add anything extra you think would be good to have at a karaoke venue!
+
+Room (has max capacity and list of people in it)
+Person (has name, money, favorite song)
+Jukebox (has song list, instance per room)
+Venue (has rooms, has a common area which holds everyone not in the room, has a total earnings)
+Player - customised instance of Person which player controls
+Plot - the story of the evening. The player progresses through it as they hang out at the karaoke bar. 
+
+
+Rooms could have genre (rock, cheese) - and this could change based on the preferences of the people in it
+If two people have same favorite song and it comes on, they can duet
+
+The metalheads hate it. You're out of the room!
+The boogiers hate it.
+The cheese-lovers hate it.
+
+They love it! Everyone cheers. Someone hands you a beer.
+wine spritzer.
+Malibu and lemonade.
+You're feeling a bit tipsy.
+
+Jagerbombs!

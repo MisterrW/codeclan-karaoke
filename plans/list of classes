@@ -1,0 +1,8 @@
+song - title, artist, genre, lyrics
+jukebox - songs lists, related methods
+room - max count / comfort level, buzz level, genre, enter / exit room methods
+player - skill level, favorite songs
+person - name, fave song
+venue - hub area, total takings, venue name
+plot
+unplotted events - jagerbombs stag dos, etc
