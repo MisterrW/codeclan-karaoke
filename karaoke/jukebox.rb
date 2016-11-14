@@ -20,7 +20,7 @@ class Jukebox
 
     @rock = [
       {name: "For Whom The Bell Tolls", artist: "Metallica", lyrics: "For whom the bell tolls...time marches on", genre: "rock"},
-      {name: "My Own Summer", artist: "Deftones", lyrics: "There' no crowds in the streets...and no sun", genre: "rock"},
+      {name: "My Own Summer", artist: "Deftones", lyrics: "There's no crowds in the streets...and no sun", genre: "rock"},
       {name: "Pardon Me", artist: "Incubus", lyrics: "Pardon me while I burst into flames, pardon me, pardon me...", genre: "rock"}
     ]
 
@@ -89,10 +89,8 @@ class Jukebox
     if song_choice == nil
       puts "Song not found, sorry."
     else
-      # puts "#{song_choice[:name]} coming right up!"
       @now_playing = song_choice
       puts "#{song_choice[:name]} coming right up!"
-      # return "Song not found, sorry."
     end
   end
 
