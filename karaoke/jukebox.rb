@@ -2,7 +2,7 @@
 require('pry-byebug')
 
 class Jukebox
-  attr_reader :song_list
+  attr_reader :song_list, :now_playing
   def initialize(genre)
     @pop = [
       {name: "Toxic", artist: "Britney Spears", lyrics: "...but you know that you're toxic", genre: "pop"},
@@ -19,7 +19,9 @@ class Jukebox
     ]
 
     @rock = [
-      {name: "For Whom The Bell Tolls", artist: "Metallica", lyrics: "For whom the bell tolls...time marches on", genre: "rock"}
+      {name: "For Whom The Bell Tolls", artist: "Metallica", lyrics: "For whom the bell tolls...time marches on", genre: "rock"},
+      {name: "My Own Summer", artist: "Deftones", lyrics: "There' no crowds in the streets...and no sun", genre: "rock"},
+      {name: "Pardon Me", artist: "Incubus", lyrics: "Pardon me while I burst into flames, pardon me, pardon me...", genre: "rock"}
     ]
 
     @all = @pop + @folk + @cheese + @rock
