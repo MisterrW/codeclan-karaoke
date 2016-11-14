@@ -14,27 +14,27 @@ class JukeboxTest < MiniTest::Test
 
   def test_song_list
     cheesebox = Jukebox.new("cheese")
-    cheese_list = {
-    "Mama-Mia" => {name: "Mama-Mia", artist: "Abba", lyrics: "Mama-Mia, here I go again...", genre: "cheese"}
-  }
+    cheese_list = [
+      {name: "Mama-Mia", artist: "Abba", lyrics: "Mama-Mia, here I go again...", genre: "cheese"},
+      {name: "My Heart Will Go On", artist: "Celine Dion", lyrics: "Every night in my dreams, I see you, I feel you...", genre: "cheese"},
+    ]
     assert_equal(cheese_list, cheesebox.song_list)
   end
 
   def test_change_playlist
     cheesebox = Jukebox.new("cheese")
-    rock_list = {
-      "For Whom The Bell Tolls" => {name: "For Whom The Bell Tolls", artist: "Metallica", lyrics: "For whom the bell tolls...time marches on", genre: "rock"}
-    }
+    rock_list = [
+      {name: "For Whom The Bell Tolls", artist: "Metallica", lyrics: "For whom the bell tolls...time marches on", genre: "rock"}
+    ]
     cheesebox.set_list("rock")
     assert_equal(rock_list, cheesebox.song_list)
   end
 
-  def test_change_playlist
+  def test_choose_song
+    #Choose p and then 1 for test to pass
     cheesebox = Jukebox.new("cheese")
-    rock_list = {
-      "For Whom The Bell Tolls" => {name: "For Whom The Bell Tolls", artist: "Metallica", lyrics: "For whom the bell tolls...time marches on", genre: "rock"}
-    }
-    cheesebox.set_list("rock")
-    assert_equal(rock_list, cheesebox.song_list)
+    cheesebox.pick_song()
+    playing = cheesebox.now_playing()
+    assert_equal("Now playing: Toxic by Britney Spears", playing)
   end
 end

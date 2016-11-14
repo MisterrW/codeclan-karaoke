@@ -1,0 +1,22 @@
+person can enter room
+
+entering room costs money
+
+person can't enter room without enough money
+
+room has max capacity
+
+room has jukebox
+
+- jukebox has genre playlists
+- random song selected when queried
+- specific songs can be shosen through genre-driven menu
+
+person has favorite song and reacts if that song playing when enter room
+
+
+stretch
+
+plot
+laubnch spotify through api
+
