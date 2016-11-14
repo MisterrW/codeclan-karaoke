@@ -22,19 +22,21 @@ class JukeboxTest < MiniTest::Test
   end
 
   def test_change_playlist
-    cheesebox = Jukebox.new("cheese")
+    cheesebox2 = Jukebox.new("cheese")
     rock_list = [
-      {name: "For Whom The Bell Tolls", artist: "Metallica", lyrics: "For whom the bell tolls...time marches on", genre: "rock"}
+      {name: "For Whom The Bell Tolls", artist: "Metallica", lyrics: "For whom the bell tolls...time marches on", genre: "rock"},
+      {name: "My Own Summer", artist: "Deftones", lyrics: "There' no crowds in the streets...and no sun", genre: "rock"},
+      {name: "Pardon Me", artist: "Incubus", lyrics: "Pardon me while I burst into flames, pardon me, pardon me...", genre: "rock"}
     ]
-    cheesebox.set_list("rock")
-    assert_equal(rock_list, cheesebox.song_list)
+    cheesebox2.set_list("rock")
+    assert_equal(rock_list, cheesebox2.song_list)
   end
 
   def test_choose_song
     #Choose p and then 1 for test to pass
-    cheesebox = Jukebox.new("cheese")
-    cheesebox.pick_song()
-    playing = cheesebox.now_playing()
+    cheesebox3 = Jukebox.new("cheese")
+    cheesebox3.choose_genre()
+    playing = cheesebox3.now_playing()
     assert_equal("Now playing: Toxic by Britney Spears", playing)
   end
 end

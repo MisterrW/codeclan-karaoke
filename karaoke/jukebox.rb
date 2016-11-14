@@ -103,10 +103,6 @@ class Jukebox
 
 end
 
-rockbox = Jukebox.new("rock")
-
-rockbox.choose_genre()
-
 
 
 
