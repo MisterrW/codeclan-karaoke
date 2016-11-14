@@ -23,11 +23,7 @@ class JukeboxTest < MiniTest::Test
 
   def test_change_playlist
     cheesebox2 = Jukebox.new("cheese")
-    rock_list = [
-      {name: "For Whom The Bell Tolls", artist: "Metallica", lyrics: "For whom the bell tolls...time marches on", genre: "rock"},
-      {name: "My Own Summer", artist: "Deftones", lyrics: "There' no crowds in the streets...and no sun", genre: "rock"},
-      {name: "Pardon Me", artist: "Incubus", lyrics: "Pardon me while I burst into flames, pardon me, pardon me...", genre: "rock"}
-    ]
+    rock_list = [{:name=>"For Whom The Bell Tolls", :artist=>"Metallica", :lyrics=>"For whom the bell tolls...time marches on", :genre=>"rock"}, {:name=>"My Own Summer", :artist=>"Deftones", :lyrics=>"There's no crowds in the streets...and no sun", :genre=>"rock"}, {:name=>"Pardon Me", :artist=>"Incubus", :lyrics=>"Pardon me while I burst into flames, pardon me, pardon me...", :genre=>"rock"}]
     cheesebox2.set_list("rock")
     assert_equal(rock_list, cheesebox2.song_list)
   end
