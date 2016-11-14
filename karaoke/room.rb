@@ -11,10 +11,11 @@ class Room
         venue.occupants.pop(person)
         @occupants << person
         person.current_room = self
-        person.pay(@entry fee)
+        person.pay(@entry_fee)
         venue.earnings += @entry_fee
       else
         puts "Sorry, the room is full."
+      end
     else
       puts "Leave current room first!"
     end
