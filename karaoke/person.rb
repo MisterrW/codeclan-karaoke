@@ -21,6 +21,7 @@ class Person
   def leave_room
     puts "#{self} has left the #{@current_room} room."
     room.exit_one(self)
+  end
 
   def sing
     puts "#{self} grabs the mic and sings #{current_room.jukebox.now_playing[:name]} by #{current_room.jukebox.now_playing[:artist]}."
